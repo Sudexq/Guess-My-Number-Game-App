@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, StyleSheet, Text, Alert } from "react-native";
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 import { Title } from "../components/ui/Title";
 
@@ -64,10 +65,10 @@ export const GameScreen = ({ userNumberProp, gameOverProp }) => {
         <Text style={styles.guessText}>Higher or Lower</Text>
         <View style={styles.buttonContainer}>
           <PrimaryButton onPressProp={nextGuessHandler.bind(this, "lower")}>
-            -
+          <FontAwesome6 name="minus" size={24} color="white" />
           </PrimaryButton>
           <PrimaryButton onPressProp={nextGuessHandler.bind(this, "higher")}>
-            +
+          <FontAwesome6 name="plus" size={24} color="white" />
           </PrimaryButton>
         </View>
       </View>
